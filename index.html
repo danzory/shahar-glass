@@ -208,8 +208,8 @@
                             <i data-lucide="trophy" class="text-emerald-500 w-5 h-5"></i>
                         </div>
                         <div>
-                            <p class="font-bold text-slate-900 text-sm mb-1">שיאים חדשים! (07.04) 🏆</p>
-                            <p class="text-sm text-slate-600 leading-relaxed">התקדמות מרשימה: מתח (גומיה כתומה צרה) ל-5 חזרות, וקיקבק 70 ק"ג ל-8 חזרות!</p>
+                            <p class="font-bold text-slate-900 text-sm mb-1">שיאים חדשים! 🏆</p>
+                            <p class="text-sm text-slate-600 leading-relaxed">התקדמות מרשימה: חתירה במוט 30 ק"ג ל-6 חזרות, מתח (גומיה כתומה צרה) ל-5 חזרות, וקיקבק 70 ק"ג ל-8 חזרות!</p>
                         </div>
                     </div>
                     
@@ -618,8 +618,6 @@
             });
 
             // --- PR Data Mapping (Shachar Glass Data) ---
-            // Data structure mapping Shachar's old rawProgressData + static tables
-            
             const processHistory = (arr) => {
                 let maxWeight = -Infinity;
                 return arr.map(dp => {
@@ -636,6 +634,13 @@
                 {
                     id: 'pullups', name: 'מתח (עם גומיה)', note: 'ללא עזרה במכונה', current: 'גומיה כתומה (צר) x 5', unit: 'רמת קושי', isNewPR: true,
                     history: processHistory([{ date: '13.8', weight: 1 }, { date: '20.8', weight: 1 }, { date: '23.10', weight: 1 }, { date: '5.6', weight: 1 }, { date: '16.7', weight: 1 }, { date: '20.7', weight: 1 }, { date: '30.7', weight: 2 }, { date: '5.8', weight: 2 }, { date: '13.8', weight: 2 }, { date: '17.8', weight: 3 }, { date: '24.7', weight: 3 }, { date: '12.9', weight: 3 }, { date: '18.10', weight: 3 }, { date: '29.11', weight: 4 }, { date: '27.12', weight: 3 }, { date: '7.4', weight: 3 }])
+                },
+                {
+                    id: 'barbell_row', name: 'חתירה (מוט)', note: '', current: '30 ק"ג x 6', unit: 'ק"ג', isNewPR: true, dateStr: '16.04.26',
+                    history: [
+                        { date: '03.01.26', weight: 25 },
+                        { date: '16.04.26', weight: 30 }
+                    ]
                 },
                 {
                     id: 'kickback', name: 'קיקבק', note: '', current: '70 ק"ג x 8', dateStr: '07.04.26', unit: 'ק"ג', isNewPR: true, history: []
@@ -659,7 +664,6 @@
                 // Items without history (from static table)
                 { id: 'squat_pause', name: 'סקוואט (פאוז)', current: '40 ק"ג x 4', dateStr: '04.01.26', history: [] },
                 { id: 'back_ext', name: 'פשיטת גו (כיסא רומי)', current: '20 ק"ג x 8', dateStr: '04.01.26', history: [] },
-                { id: 'barbell_row', name: 'חתירה (מוט)', current: '25 ק"ג x 8', dateStr: '03.01.26', history: [] },
                 { id: 'dips_grav', name: 'מקבילים (גרביטון)', current: '-28 ק"ג x 10', dateStr: '03.01.26', history: [] },
                 { id: 'pulldown_mach', name: 'פולי מכונה עליון', current: '30 ק"ג x 5', dateStr: '29.11.25', history: [] },
                 { id: 'leg_press_uni', name: 'לחיצת רגליים (רגל רגל)', current: '30 ק"ג x 10', dateStr: '29.11.25', history: [] },
@@ -1119,6 +1123,3 @@
     </script>
 </body>
 </html>
-
-
-```
